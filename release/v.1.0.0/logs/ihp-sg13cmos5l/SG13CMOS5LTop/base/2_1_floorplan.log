@@ -1,0 +1,103 @@
+OpenROAD 26Q1-1929-g7cf7b720fd 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 16 thread(s).
+source /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/suppress_message.tcl
+read_liberty -corner slow /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_slow_1p08V_125C.lib
+read_liberty -corner slow /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_slow_1p08V_3p0V_125C.lib
+read_liberty -corner fast /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_fast_1p32V_m40C.lib
+read_liberty -corner fast /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_fast_1p32V_3p6V_m40C.lib
+read_db /home/daniel/work/aesc/i2c-gpio-expander/build//I2cGpioExpander/SG13CMOS5L/orfs//results/ihp-sg13cmos5l/SG13CMOS5LTop/base/1_synth.odb
+source /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/setRC.tcl
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 2 input ports missing set_input_delay.
+Warning: There are 5 output ports missing set_output_delay.
+Warning: There are 6 unconstrained endpoints.
+number instances in verilog is 1049
+[INFO IFP-0001] Added 92 rows of 726 site CoreSite.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 1050.240 1050.840 ) um
+[INFO IFP-0101] Core BBox: ( 351.360 351.540 ) ( 699.840 699.300 ) um
+[INFO IFP-0102] Core area:                       121187.405 um^2
+[INFO IFP-0103] Total instances area:            305454.528 um^2
+[INFO IFP-0104] Effective utilization:                2.521
+[INFO IFP-0105] Number of instances:                   1049
+source /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/make_tracks.tcl
+source /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/fastroute.tcl
+source /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/pad.tcl
+[INFO PAD-0041] Placed 5 pads in IO_NORTH.
+[INFO PAD-0041] Placed 5 pads in IO_EAST.
+[INFO PAD-0041] Placed 5 pads in IO_SOUTH.
+[INFO PAD-0041] Placed 5 pads in IO_WEST.
+[WARNING PAD-0033] Could not find a block terminal associated with net: "IOVDD", creating now.
+[INFO PAD-0116] Creating terminal for IOVDD on TopMetal1 at (70.000um, 326.000um) - (140.000um, 396.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "IOVSS", creating now.
+[INFO PAD-0116] Creating terminal for IOVSS on TopMetal1 at (70.000um, 407.000um) - (140.000um, 477.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "VDD", creating now.
+[INFO PAD-0116] Creating terminal for VDD on TopMetal1 at (910.000um, 326.000um) - (980.000um, 396.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "VSS", creating now.
+[INFO PAD-0116] Creating terminal for VSS on TopMetal1 at (910.000um, 407.000um) - (980.000um, 477.000um)
+[INFO PAD-0116] Creating terminal for io_address_0_PAD on TopMetal1 at (910.000um, 488.000um) - (980.000um, 558.000um)
+[INFO PAD-0116] Creating terminal for io_address_1_PAD on TopMetal1 at (910.000um, 569.000um) - (980.000um, 639.000um)
+[INFO PAD-0116] Creating terminal for io_address_2_PAD on TopMetal1 at (910.000um, 650.000um) - (980.000um, 720.000um)
+[INFO PAD-0116] Creating terminal for io_clock_PAD on TopMetal1 at (326.000um, 70.000um) - (396.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_0_PAD on TopMetal1 at (70.000um, 488.000um) - (140.000um, 558.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_1_PAD on TopMetal1 at (70.000um, 569.000um) - (140.000um, 639.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_2_PAD on TopMetal1 at (70.000um, 650.000um) - (140.000um, 720.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_3_PAD on TopMetal1 at (326.000um, 910.000um) - (396.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_4_PAD on TopMetal1 at (407.000um, 910.000um) - (477.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_5_PAD on TopMetal1 at (488.000um, 910.000um) - (558.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_6_PAD on TopMetal1 at (569.000um, 910.000um) - (639.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_7_PAD on TopMetal1 at (650.000um, 910.000um) - (720.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_i2c_interrupt_PAD on TopMetal1 at (650.000um, 70.000um) - (720.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_i2c_scl_PAD on TopMetal1 at (488.000um, 70.000um) - (558.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_i2c_sda_PAD on TopMetal1 at (569.000um, 70.000um) - (639.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_reset_PAD on TopMetal1 at (407.000um, 70.000um) - (477.000um, 140.000um)
+Repair tie lo fanout...
+[INFO RSZ-0042] Inserted 3 tie sg13cmos5l_tielo instances.
+Repair tie hi fanout...
+[INFO RSZ-0042] Inserted 185 tie sg13cmos5l_tiehi instances.
+repair_timing -setup_margin 0 -hold_margin 0.0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1uA
+ power 1pW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+    Metal1 |        8.55e-03 |         1.00e-10
+    Metal2 |        2.54e-03 |         1.69e-04
+    Metal3 |        1.54e-03 |         1.83e-04
+    Metal4 |        6.31e-04 |         1.66e-04
+ TopMetal1 |        1.28e-05 |         1.11e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      Via1 |       2.00e-03 
+      Via2 |       2.00e-03 
+      Via3 |       2.00e-03 
+   TopVia1 |       4.00e-04 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 18783 um^2 15% utilization.
+write_db /home/daniel/work/aesc/i2c-gpio-expander/build//I2cGpioExpander/SG13CMOS5L/orfs//results/ihp-sg13cmos5l/SG13CMOS5LTop/base/2_1_floorplan.odb
+write_sdc -no_timestamp /home/daniel/work/aesc/i2c-gpio-expander/build//I2cGpioExpander/SG13CMOS5L/orfs//results/ihp-sg13cmos5l/SG13CMOS5LTop/base/2_1_floorplan.sdc
+Elapsed time: 0:00.64[h:]min:sec. CPU time: user 0.76 sys 0.09 (133%). Peak memory: 131700KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            128 7fa21a880b76dd256a16

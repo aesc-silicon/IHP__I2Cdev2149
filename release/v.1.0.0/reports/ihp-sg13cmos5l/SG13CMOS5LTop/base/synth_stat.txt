@@ -1,0 +1,178 @@
+
+16. Printing statistics.
+
+=== BufferCC ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        8        - wires
+        8        - wire bits
+        5        - public wires
+        5        - public wire bits
+        4        - ports
+        4        - port bits
+        5  123.379 cells
+        2   97.978   sg13cmos5l_dfrbpq_1
+        2   18.144   sg13cmos5l_nand2b_1
+        1    7.258   sg13cmos5l_tiehi
+
+   Chip area for module '\BufferCC': 123.379200
+     of which used for sequential elements: 97.977600 (79.41%)
+
+=== BufferCC_2 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        5        - wires
+       19        - wire bits
+        4        - public wires
+       18        - public wire bits
+        4        - ports
+       18        - port bits
+        9  399.168 cells
+        8   391.91   sg13cmos5l_dfrbpq_1
+        1    7.258   sg13cmos5l_tiehi
+
+   Chip area for module '\BufferCC_2': 399.168000
+     of which used for sequential elements: 391.910400 (98.18%)
+
+=== SG13CMOS5LTop ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1051        - wires
+     1051        - wire bits
+      215        - public wires
+      215        - public wire bits
+       16        - ports
+       16        - port bits
+     1030 3.05E+05 cells
+        1    14400   sg13cmos5l_IOPadIOVdd
+        1    14400   sg13cmos5l_IOPadIOVss
+        5    72000   sg13cmos5l_IOPadIn
+        8   115200   sg13cmos5l_IOPadInOut16mA
+        2    28800   sg13cmos5l_IOPadInOut4mA
+        1    14400   sg13cmos5l_IOPadOut4mA
+        1    14400   sg13cmos5l_IOPadVdd
+        1    14400   sg13cmos5l_IOPadVss
+        9  114.307   sg13cmos5l_a21o_1
+       74  671.328   sg13cmos5l_a21oi_1
+        6   87.091   sg13cmos5l_a221oi_1
+       49  531.581   sg13cmos5l_a22oi_1
+       68  616.896   sg13cmos5l_and2_1
+        1   10.886   sg13cmos5l_and2_2
+       13   165.11   sg13cmos5l_and3_1
+        8  116.122   sg13cmos5l_and4_1
+       51  370.138   sg13cmos5l_buf_1
+       28  254.016   sg13cmos5l_buf_2
+       13  188.698   sg13cmos5l_buf_4
+        7   165.11   sg13cmos5l_buf_8
+      173 8.48E+03   sg13cmos5l_dfrbpq_1
+       44  239.501   sg13cmos5l_inv_1
+       63 1.14E+03   sg13cmos5l_mux2_1
+        2   76.205   sg13cmos5l_mux4_1
+       60  435.456   sg13cmos5l_nand2_1
+        1   10.886   sg13cmos5l_nand2_2
+       20   181.44   sg13cmos5l_nand2b_1
+       80   725.76   sg13cmos5l_nand3_1
+       13   165.11   sg13cmos5l_nand3b_1
+       16  174.182   sg13cmos5l_nand4_1
+       71   515.29   sg13cmos5l_nor2_1
+        3   32.659   sg13cmos5l_nor2_2
+       11   99.792   sg13cmos5l_nor2b_1
+        2   25.402   sg13cmos5l_nor2b_2
+       15   136.08   sg13cmos5l_nor3_1
+        9   97.978   sg13cmos5l_nor4_1
+        2   43.546   sg13cmos5l_nor4_2
+       81  734.832   sg13cmos5l_o21ai_1
+        5    45.36   sg13cmos5l_or2_1
+        1   12.701   sg13cmos5l_or3_1
+        3   43.546   sg13cmos5l_or4_1
+        1    7.258   sg13cmos5l_tiehi
+        1    7.258   sg13cmos5l_tielo
+        2    29.03   sg13cmos5l_xnor2_1
+        4   58.061   sg13cmos5l_xor2_1
+        3        - submodules
+        2        -   BufferCC
+        1        -   BufferCC_2
+
+   Chip area for module '\SG13CMOS5LTop': 304806.749400
+     of which used for sequential elements: 8475.062400 (2.78%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     1049 3.05E+05 SG13CMOS5LTop
+        5  123.379 BufferCC
+        9  399.168 BufferCC_2
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     1072        - wires
+     1086        - wire bits
+      229        - public wires
+      243        - public wire bits
+       28        - ports
+       42        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+     1049 3.05E+05 cells
+        1    14400   sg13cmos5l_IOPadIOVdd
+        1    14400   sg13cmos5l_IOPadIOVss
+        5    72000   sg13cmos5l_IOPadIn
+        8   115200   sg13cmos5l_IOPadInOut16mA
+        2    28800   sg13cmos5l_IOPadInOut4mA
+        1    14400   sg13cmos5l_IOPadOut4mA
+        1    14400   sg13cmos5l_IOPadVdd
+        1    14400   sg13cmos5l_IOPadVss
+        9  114.307   sg13cmos5l_a21o_1
+       74  671.328   sg13cmos5l_a21oi_1
+        6   87.091   sg13cmos5l_a221oi_1
+       49  531.581   sg13cmos5l_a22oi_1
+       68  616.896   sg13cmos5l_and2_1
+        1   10.886   sg13cmos5l_and2_2
+       13   165.11   sg13cmos5l_and3_1
+        8  116.122   sg13cmos5l_and4_1
+       51  370.138   sg13cmos5l_buf_1
+       28  254.016   sg13cmos5l_buf_2
+       13  188.698   sg13cmos5l_buf_4
+        7   165.11   sg13cmos5l_buf_8
+      185 9.06E+03   sg13cmos5l_dfrbpq_1
+       44  239.501   sg13cmos5l_inv_1
+       63 1.14E+03   sg13cmos5l_mux2_1
+        2   76.205   sg13cmos5l_mux4_1
+       60  435.456   sg13cmos5l_nand2_1
+        1   10.886   sg13cmos5l_nand2_2
+       24  217.728   sg13cmos5l_nand2b_1
+       80   725.76   sg13cmos5l_nand3_1
+       13   165.11   sg13cmos5l_nand3b_1
+       16  174.182   sg13cmos5l_nand4_1
+       71   515.29   sg13cmos5l_nor2_1
+        3   32.659   sg13cmos5l_nor2_2
+       11   99.792   sg13cmos5l_nor2b_1
+        2   25.402   sg13cmos5l_nor2b_2
+       15   136.08   sg13cmos5l_nor3_1
+        9   97.978   sg13cmos5l_nor4_1
+        2   43.546   sg13cmos5l_nor4_2
+       81  734.832   sg13cmos5l_o21ai_1
+        5    45.36   sg13cmos5l_or2_1
+        1   12.701   sg13cmos5l_or3_1
+        3   43.546   sg13cmos5l_or4_1
+        4    29.03   sg13cmos5l_tiehi
+        1    7.258   sg13cmos5l_tielo
+        2    29.03   sg13cmos5l_xnor2_1
+        4   58.061   sg13cmos5l_xor2_1
+        3  645.926 submodules
+        2  246.758   BufferCC
+        1  399.168   BufferCC_2
+
+   Chip area for top module '\SG13CMOS5LTop': 305452.675800
+     of which used for sequential elements: 9062.928000 (2.97%)
+

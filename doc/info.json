@@ -1,0 +1,19 @@
+{
+  "name": "I2Cdev2149",
+  "design_type": "D",
+  "technology": "IHP",
+  "unique_id": "2149",
+  "license": "CERN-OHL-W-2.0",
+  "trl": 0,
+  "repository": "",
+  "pdk_version": "",
+  "process": "SG13CMOS5L",
+  "dependencies": {},
+  "tools": {},
+  "release": {
+    "version": "v.1.0.0",
+    "gds": "release/v.1.0.0/gds",
+    "netlist": "release/v.1.0.0/netlist",
+    "doc": "release/v.1.0.0/doc"
+  }
+}
