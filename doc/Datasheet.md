@@ -12,6 +12,58 @@ The chip features an I2C interface for receiving and handling transmissions from
 
 This device supports `I2C Fast Mode`, enabling communication speeds of up to 400 kbit/s.
 
+### Device Address
+
+The 7-bit I2C device address is composed of a fixed upper 4 bits and 3 configurable lower bits set by the `io_address` pins at reset:
+
+| Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2        | Bit 1        | Bit 0        |
+|-------|-------|-------|-------|--------------|--------------|--------------|
+| 0     | 1     | 1     | 0     | io_address_2 | io_address_1 | io_address_0 |
+
+### Write Transaction
+
+A write transaction sets a register value. The master sends a START condition, the device address with the R/W bit low, the target register address, and the data byte, each acknowledged by the device.
+
+```
+Master: S | ADDR + W | ·   | REG  | ·   | DATA | ·   | P
+Device: · | ·        | ACK | ·    | ACK | ·    | ACK | ·
+```
+
+| Step | Sender | Description                        |
+|------|--------|------------------------------------|
+| S    | Master | START condition                    |
+| ADDR | Master | 7-bit device address + W bit (0)   |
+| ACK  | Device | Acknowledge                        |
+| REG  | Master | 8-bit register address (0x0–0x2)   |
+| ACK  | Device | Acknowledge                        |
+| DATA | Master | 8-bit data to write                |
+| ACK  | Device | Acknowledge                        |
+| P    | Master | STOP condition                     |
+
+### Read Transaction
+
+A read transaction first writes the target register address, then restarts and reads back the value. The master sends a NAK after the data byte to signal it does not require further data.
+
+```
+Master: S | ADDR + W | ·   | REG  | ·   | P | Sr | ADDR + R | ·   | ·    | NAK | P
+Device: · | ·        | ACK | ·    | ACK | · | ·  | ·        | ACK | DATA | ·   | ·
+```
+
+| Step | Sender | Description                        |
+|------|--------|------------------------------------|
+| S    | Master | START condition                    |
+| ADDR | Master | 7-bit device address + W bit (0)   |
+| ACK  | Device | Acknowledge                        |
+| REG  | Master | 8-bit register address (0x0–0x2)   |
+| ACK  | Device | Acknowledge                        |
+| P    | Master | STOP condition                     |
+| Sr   | Master | Repeated START condition           |
+| ADDR | Master | 7-bit device address + R bit (1)   |
+| ACK  | Device | Acknowledge                        |
+| DATA | Device | 8-bit register value               |
+| NAK  | Master | No acknowledge (end of read)       |
+| P    | Master | STOP condition                     |
+
 ## GPIO
 
 The device is equipped with 8 General Purpose Input/Output (GPIO) pins, configurable through the I2C interface.
