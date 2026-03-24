@@ -1,0 +1,39 @@
+Yosys 0.63 (git sha1 d3e297fcd, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3) [the-openroad-project/yosys]
+Using ABC speed script.
+Extracting clock period from SDC file: /home/daniel/work/aesc/i2c-gpio-expander/build//I2cGpioExpander/SG13CMOS5L/orfs//results/ihp-sg13cmos5l/SG13CMOS5LTop/base/clock_period.txt
+Setting clock period to 20000
+1. Executing Liberty frontend: /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib
+2. Executing Liberty frontend: /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_typ_1p2V_3p3V_25C.lib
+3. Executing Liberty frontend: /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib
+4. Executing Liberty frontend: /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_typ_1p2V_3p3V_25C.lib
+5. Executing Verilog-2005 frontend: /home/daniel/work/aesc/i2c-gpio-expander/build//I2cGpioExpander/SG13CMOS5L/zibal/SG13CMOS5LTop.v
+6. Executing Verilog-2005 frontend: /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/cells_clkgate.v
+7. Executing HIERARCHY pass (managing design hierarchy).
+8. Executing AST frontend in derive mode using pre-parsed AST for module `\SG13CMOS5LTop'.
+8.1. Analyzing design hierarchy..
+8.2. Executing AST frontend in derive mode using pre-parsed AST for module `\I2cGpioExpander'.
+8.3. Analyzing design hierarchy..
+8.4. Executing AST frontend in derive mode using pre-parsed AST for module `\InterruptCtrl'.
+8.5. Executing AST frontend in derive mode using pre-parsed AST for module `\GpioCtrl'.
+8.6. Executing AST frontend in derive mode using pre-parsed AST for module `\I2cDeviceCtrl'.
+8.7. Analyzing design hierarchy..
+8.8. Executing AST frontend in derive mode using pre-parsed AST for module `\BufferCC'.
+8.9. Executing AST frontend in derive mode using pre-parsed AST for module `\ClockDivider'.
+8.10. Executing AST frontend in derive mode using pre-parsed AST for module `\BufferCC_2'.
+8.11. Analyzing design hierarchy..
+8.12. Analyzing design hierarchy..
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module ClockDivider because it contains processes (run 'proc' command first).
+Warning: Ignoring module BufferCC because it contains processes (run 'proc' command first).
+Warning: Ignoring module I2cDeviceCtrl because it contains processes (run 'proc' command first).
+Warning: Ignoring module GpioCtrl because it contains processes (run 'proc' command first).
+Warning: Ignoring module InterruptCtrl because it contains processes (run 'proc' command first).
+Warning: Ignoring module I2cGpioExpander because it contains processes (run 'proc' command first).
+Warning: Ignoring module SG13CMOS5LTop because it contains processes (run 'proc' command first).
+Warning: Ignoring module BufferCC_2 because it contains processes (run 'proc' command first).
+10. Executing RTLIL backend.
+Warnings: 8 unique messages, 8 total
+End of script. Logfile hash: 32c9602da8, CPU: user 0.05s system 0.00s, MEM: 23.36 MB peak
+Yosys 0.63 (git sha1 d3e297fcd, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 53% 6x read_liberty (0 sec), 22% 1x hierarchy (0 sec), ...
+Elapsed time: 0:00.12[h:]min:sec. CPU time: user 0.11 sys 0.00 (99%). Peak memory: 28652KB.

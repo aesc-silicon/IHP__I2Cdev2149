@@ -1,0 +1,21 @@
+OpenROAD 26Q1-1929-g7cf7b720fd 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 16 thread(s).
+source /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/suppress_message.tcl
+read_liberty -corner slow /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_slow_1p08V_125C.lib
+read_liberty -corner slow /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_slow_1p08V_3p0V_125C.lib
+read_liberty -corner fast /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_fast_1p32V_m40C.lib
+read_liberty -corner fast /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK//ihp-sg13cmos5l/libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_fast_1p32V_3p6V_m40C.lib
+[INFO ODB-0227] LEF file: /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_tech.lef, created 15 layers, 52 vias
+[INFO ODB-0227] LEF file: /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_stdcell.lef, created 84 library cells
+[INFO ODB-0227] LEF file: /home/daniel/work/aesc/i2c-gpio-expander/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_io/lef/sg13cmos5l_io.lef, created 22 library cells
+[INFO ODB-0227] LEF file: /home/daniel/work/aesc/i2c-gpio-expander/build/I2cGpioExpander/SG13CMOS5L/zibal/macros/bondpad/bondpad_70x70.lef, created 1 library cells
+link_design SG13CMOS5LTop
+source /home/daniel/work/aesc/i2c-gpio-expander/tools/OpenROAD-flow-scripts/flow/platforms/ihp-sg13cmos5l/setRC.tcl
+write_db /home/daniel/work/aesc/i2c-gpio-expander/build//I2cGpioExpander/SG13CMOS5L/orfs//results/ihp-sg13cmos5l/SG13CMOS5LTop/base/1_synth.odb
+write_sdc -no_timestamp /home/daniel/work/aesc/i2c-gpio-expander/build//I2cGpioExpander/SG13CMOS5L/orfs//results/ihp-sg13cmos5l/SG13CMOS5LTop/base/1_synth.sdc
+Elapsed time: 0:00.29[h:]min:sec. CPU time: user 0.26 sys 0.03 (100%). Peak memory: 106248KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            0            103 e9555038d9392d13840e
